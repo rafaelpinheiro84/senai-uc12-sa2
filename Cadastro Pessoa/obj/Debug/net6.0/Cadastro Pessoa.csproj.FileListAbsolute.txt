@@ -1,0 +1,30 @@
+D:\Senai\Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.exe
+D:\Senai\Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.deps.json
+D:\Senai\Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.runtimeconfig.json
+D:\Senai\Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.dll
+D:\Senai\Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\ref\Cadastro Pessoa.dll
+D:\Senai\Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.pdb
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.csproj.AssemblyReference.cache
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.GeneratedMSBuildEditorConfig.editorconfig
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.AssemblyInfoInputs.cache
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.AssemblyInfo.cs
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.csproj.CoreCompileInputs.cache
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.dll
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\ref\Cadastro Pessoa.dll
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.pdb
+D:\Senai\Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.genruntimeconfig.cache
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.exe
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.deps.json
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.runtimeconfig.json
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.dll
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\ref\Cadastro Pessoa.dll
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\bin\Debug\net6.0\Cadastro Pessoa.pdb
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.csproj.AssemblyReference.cache
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.GeneratedMSBuildEditorConfig.editorconfig
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.AssemblyInfoInputs.cache
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.AssemblyInfo.cs
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.csproj.CoreCompileInputs.cache
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.dll
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\ref\Cadastro Pessoa.dll
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.pdb
+D:\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\Cadastro Pessoa\obj\Debug\net6.0\Cadastro Pessoa.genruntimeconfig.cache

@@ -1,0 +1,5 @@
+Nome: Senai SP.
+CNPJ: 00.000.000/0001-00.
+Razão Social: Senai Razao Social.
+Endereço: Alameda Barão de Limeira 539.
+Rendimento: R$ 150000,50.
