@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\handr\\.nuget\\packages\\": {}
+    "/Users/handryocasali/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Senai-FullStack\\4 - Back-End\\Codificação Back-end\\SA2\\Cadastro Pessoa\\Cadastro Pessoa.csproj",
+      "projectUniqueName": "/Users/handryocasali/Documentos/Projetos Programação/SA2-UC12/Cadastro Pessoa/Cadastro Pessoa.csproj",
       "projectName": "Cadastro Pessoa",
-      "projectPath": "D:\\Senai-FullStack\\4 - Back-End\\Codificação Back-end\\SA2\\Cadastro Pessoa\\Cadastro Pessoa.csproj",
-      "packagesPath": "C:\\Users\\handr\\.nuget\\packages\\",
-      "outputPath": "D:\\Senai-FullStack\\4 - Back-End\\Codificação Back-end\\SA2\\Cadastro Pessoa\\obj\\",
+      "projectPath": "/Users/handryocasali/Documentos/Projetos Programação/SA2-UC12/Cadastro Pessoa/Cadastro Pessoa.csproj",
+      "packagesPath": "/Users/handryocasali/.nuget/packages/",
+      "outputPath": "/Users/handryocasali/Documentos/Projetos Programação/SA2-UC12/Cadastro Pessoa/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\handr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/handryocasali/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -60,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
       }
     }
   }

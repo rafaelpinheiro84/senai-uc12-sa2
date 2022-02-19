@@ -12,9 +12,12 @@ namespace Cadastro_Pessoa.Classes
             this.Numero = numero;
             this.Complemento = complemento;
             this.EndComercial = endComercial;
-
         }
 
-
+        public Endereco(string logradouro, int numero)
+        {
+            this.Logradouro = logradouro;
+            this.Numero = numero;
+        }
     }
 }
