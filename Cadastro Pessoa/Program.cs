@@ -1,45 +1,232 @@
 ﻿using System;
 using Cadastro_Pessoa.Classes;
 
-namespace Cadastro_Pessoa
+var metodoPJ = new PessoaFisica();
+Console.WriteLine(metodoPJ.PagarImposto(2500m));
+Console.ReadLine();
+
+
+Console.WriteLine(@"
+=========================================================
+|                 BEM-VINDO AO SISTEMA!!!               |
+|                                                       |
+|      CADASTRO de Pessoa Física e Pessoa Jurídica      | 
+=========================================================  
+ ");
+
+
+Esperar("Carregando ", 500);
+
+List<PessoaFisica> pessoasFisicas = new List<PessoaFisica>();
+List<PessoaJuridica> pessoasJuridicas = new List<PessoaJuridica>();
+
+string opcao;
+do
 {
-    class Program 
+    Console.Clear();
+    Thread.Sleep(500);
+    opcao = MostrarMenu();
+
+    switch (opcao)
     {
-        static void Main( string[] args) {
+        case "1":
+            CadastrarPessoaFisica(pessoasFisicas);
 
-            PessoaFisica pessoaPF = new PessoaFisica("12.345.678-90", "01/01/2000", "Handryo",
-                                                     new Endereco("125 26 D St - Jumeirah,  Dubai - Emirados Árabes Unidos", 5013550,"Confia", false), 1500.5M);
+            Console.WriteLine("Cadastro criado com sucesso!");
 
-            Console.WriteLine(pessoaPF.ToString());
-            Console.WriteLine($"Maior de idade: {pessoaPF.ValidarDataNascimento(pessoaPF.DataNasc)}");
-            Console.WriteLine();
+            Console.WriteLine("Aperte 'Enter' para voltar ao menu novamente, ou '0' para sair ");
+            opcao = Console.ReadLine();
+            break;
+
+        case "2":
+            CadastrarPessoaJuridica(pessoasJuridicas);
+
+            Console.WriteLine("Cadastro criado com sucesso!");
+            Console.Write("Aperte 'Enter' para voltar ao menu novamente, ou digite '0' para sair: ");
+            opcao = Console.ReadLine();
+            break;
+        
+        case "3":
+            ListarPessoasFisicas(pessoasFisicas);
             
-            PessoaJuridica metodoPj = new PessoaJuridica();            
-            PessoaJuridica pessoaPJ = new PessoaJuridica("00.000.000/0001-00", "Senai Razao Social", "Senai SP",
-                                                        new Endereco("Alameda Barão de Limeira",539,"SENAI Informatica", true),
-                                                        150000.5M);
+            Console.Write("Aperte 'Enter' para voltar ao menu novamente, ou digite '0' para sair: ");
+            opcao = Console.ReadLine();
+            break;
 
-            Console.WriteLine(pessoaPJ.ToString());
+        case "4":
+            
+            ListarPessoasJuridicas(pessoasJuridicas);
 
-            Console.WriteLine($"CNPJ válido: {metodoPj.ValidarCNPJ("00.000.000/0001-00")}");
+            Console.Write("Aperte 'Enter' para voltar ao menu novamente, ou digite '0' para sair: ");
+            opcao = Console.ReadLine();
+            break;
 
-            string dadosPF = pessoaPF.ToString();
-            CriarArquivoComDados(pessoaPF.Nome, dadosPF);
+        case "5":
+            Esperar("Criando arquivo", 300);
+            CriarArquivoListaPessoasFisicas("ListaDePessoasFisicas", pessoasFisicas);
 
-            string dadosPJ = pessoaPJ.ToString();
-            CriarArquivoComDados(pessoaPJ.Nome, dadosPJ);
-        }
+            Console.Write("Aperte 'Enter' para voltar ao menu novamente, ou digite '0' para sair: ");
+            opcao = Console.ReadLine();
+            break;
 
-        static void CriarArquivoComDados(string nome, string dadosPraGravar)
-        {
-            string nomeArquivo = nome;
+        case "0":
 
-            string path = Environment.CurrentDirectory + $"\\{nomeArquivo}.txt";
+            Console.WriteLine("Obrigado por usar nosso sistema !!!");
+            Esperar("Finalizando ", 300);
+            break;
 
-            StreamWriter sw = File.CreateText(path);
+        default:
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.Write("\nOpção inválida, Aperte 'Enter' para tentar novamente. ");
+            Console.ResetColor();
+            Console.ReadLine();
+            break;
+    }
 
-            sw.Write(dadosPraGravar);
-            sw.Flush();
-        }
+} while (opcao != "0");
+
+
+// Uma pessoa
+static void CriarArquivoComDados(string nome, string dadosPraGravar)
+{
+    string nomeArquivo = nome;
+
+    string path = Environment.CurrentDirectory + $"\\{nomeArquivo}.txt";
+
+    using StreamWriter sw = File.CreateText(path);
+
+    sw.Write(dadosPraGravar);
+    sw.Flush();
+}
+
+// Lista de pessoas Fisicas
+static void CriarArquivoListaPessoasFisicas(string nomeArquivo, List<PessoaFisica> listaPessoas)
+{   
+    string path = Environment.CurrentDirectory + $"\\{nomeArquivo}.txt";
+
+    using StreamWriter sw = File.CreateText(path);
+
+    foreach(var pessoa in listaPessoas)
+    {
+        sw.WriteLine(pessoa);
     }
 }
+
+static string MostrarMenu()
+{
+
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine(@"
+=========================================================
+|            Escolha uma das opções abaixo:             |
+|                                                       |
+|           1 - Cadastro de Pessoa FÍSICA               | 
+|           2 - Cadastro de Pessoa JURÍDICA             | 
+|           3 - Listar Pessoa Fisica já cadastrada      | 
+|           4 - Listar Pessoa Jurídica já cadastrada    | 
+|                                                       | 
+|           0 - Para SAIR do sistema                    |  
+|                                                       | 
+=========================================================  
+ ");
+
+    Console.ForegroundColor = ConsoleColor.DarkCyan;
+    Console.Write("Digite a opção desejada: ");
+    Console.ResetColor();
+
+    return Console.ReadLine();
+
+}
+
+static void Esperar(string mensagem, int tempoMS)
+{
+    Console.Write(mensagem);
+    for (int i = 0; i < 10; i++)
+    {
+        Console.Write(". ");
+        Thread.Sleep(tempoMS);
+    }
+}
+
+
+static void CadastrarPessoaFisica(List<PessoaFisica> listaPessoas)
+{
+    Console.WriteLine("Para o cadastro de pessoa física, por favor!");
+    Console.Write("Digite o nome:  ");
+    string nome = Console.ReadLine();
+
+    Console.Write("Digite o cpf:  ");
+    string cpf = Console.ReadLine();
+
+    Console.Write("Digite a data de nascimento:  ");
+    string dataNasc = Console.ReadLine();
+
+    Console.Write("Digite o rendimento:  ");
+    decimal rendimento = decimal.Parse(Console.ReadLine());
+
+    Console.Write("Digite o logradouro:  ");
+    string logradouro = Console.ReadLine();
+
+    Console.Write("Digite o numero da casa:  ");
+    int numero = int.Parse(Console.ReadLine());
+
+
+    listaPessoas.Add(new PessoaFisica(cpf, dataNasc, nome, new Endereco(logradouro, numero), rendimento));
+}
+
+static void CadastrarPessoaJuridica(List<PessoaJuridica> listaPessoas)
+{
+    Console.WriteLine("Para o cadastro de pessoa jurídica, por favor!");
+    Console.Write("Digite o nome:  ");
+    string nome = Console.ReadLine();
+
+    Console.Write("Digite a razao social:  ");
+    string razaoSocial = Console.ReadLine();
+
+    Console.Write("Digite o cnpj:  ");
+    string cnpj = Console.ReadLine();
+
+    Console.Write("Digite o rendimento:  ");
+    decimal rendimento = decimal.Parse(Console.ReadLine());
+
+    Console.Write("Digite o logradouro:  ");
+    string logradouro = Console.ReadLine();
+
+    Console.Write("Digite o numero da casa:  ");
+    int numero = int.Parse(Console.ReadLine());
+
+
+    listaPessoas.Add(new PessoaJuridica(cnpj, razaoSocial, nome, new Endereco(logradouro, numero), rendimento));
+}
+
+static void ListarPessoasFisicas(List<PessoaFisica> listaPessoas)
+{   
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkBlue;
+    Console.WriteLine("Listando o nome das pessoas físicas já cadastradas");
+    Console.ResetColor();
+
+    Esperar("", 200);
+    Console.WriteLine($"\n");
+
+    foreach(PessoaFisica pessoa in listaPessoas)
+    {
+        Console.WriteLine($"Nome: {pessoa.Nome}\n");
+    }
+
+}
+
+static void ListarPessoasJuridicas(List<PessoaJuridica> listaPessoas)
+{
+    Console.WriteLine("Listando o nome e razao social das pessoas juridicas já cadastradas");
+
+    foreach (var pessoa in listaPessoas)
+    {
+        Console.WriteLine($"Nome: {pessoa.Nome}");
+        Console.WriteLine($"Razao Social: {pessoa.RazaoSocial}\n");
+    }
+}
+
+
+
+

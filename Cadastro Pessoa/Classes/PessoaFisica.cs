@@ -8,6 +8,10 @@ namespace Cadastro_Pessoa.Classes
         public string CPF { get; set; }
         public string DataNasc { get; set; }
 
+        public PessoaFisica()
+        {
+            
+        }
         public PessoaFisica(string cpf, string dataNasc, string nome, Endereco endereco, decimal rendimento)
          : base(nome, endereco, rendimento)
         {
@@ -18,15 +22,18 @@ namespace Cadastro_Pessoa.Classes
         {   
             DateTime dataAtual = DateTime.Today;
             double anos = (dataAtual - dataNasc).TotalDays / 365;
+
             if( anos >= 18)
             {
                 return true;
             }
+
             return false;        
         }
 
         public bool ValidarDataNascimento(string dataNasc) // Sobrecarga 
         {   
+            // poderia usar a biblioteca Humanize junto com a classe TimeSpan
             DateTime dataConvertida;
             if( DateTime.TryParse(dataNasc, out dataConvertida))
             {
@@ -45,7 +52,24 @@ namespace Cadastro_Pessoa.Classes
 
         public override decimal PagarImposto(decimal rendimento)
         {
-            throw new NotImplementedException();
+            decimal desconto = 0;
+            if(rendimento <= 1500M)
+            {
+                desconto = 0;
+            }
+            else if(rendimento <= 3500M)
+            {
+                desconto =  0.02M;
+            }
+            else if(rendimento <= 6000M)
+            {
+                desconto =  0.035M;
+            }
+            else
+            {
+                desconto =  0.05M;
+            }
+            return rendimento * desconto;
         }
 
         public override string ToString()
@@ -53,9 +77,11 @@ namespace Cadastro_Pessoa.Classes
             return 
 @$"Nome: {Nome}.
 CPF: {CPF}.
+Maior de idade: {(ValidarDataNascimento(DataNasc) ? "Sim" : "Não")}.
 Endereço: {Endereco.Logradouro} {Endereco.Numero}.
 Data Nascimento: {DataNasc}.
 Rendimento: R$ {Rendimento:0.00}.
+Taxa de imposto a ser paga é R$ {PagarImposto(Rendimento):0.00}.
 ";
         }
     }

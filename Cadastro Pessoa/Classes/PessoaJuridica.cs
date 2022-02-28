@@ -20,11 +20,31 @@ namespace Cadastro_Pessoa.Classes
         }
         public override decimal PagarImposto(decimal rendimento)
         {
-            throw new NotImplementedException();
+            decimal desconto = 0;
+
+            if(rendimento <= 3000M)
+            {
+                desconto =  0.03M;
+            }
+            else if(rendimento <= 6000M)
+            {
+                desconto = 0.05M;
+            }
+            else if(rendimento <= 10000M)
+            {
+                desconto = 0.07M;
+            }
+            else
+            {
+                desconto = 0.09M;
+            }
+
+            return rendimento * desconto;
         }
 
         public bool ValidarCNPJ(string cnpj)
-        {
+        
+        {                            //[0-9]{2}.?[0-9]{3}.?[0-9]/?[0-9]{4}-?[0-9]{2}
             if(Regex.IsMatch(cnpj, @"(^(\d{2}.\d{3}.\d{3}/\d{4}-\d{2})|(\d{14})$)"))
             {
                 if(cnpj.Length == 18)
@@ -50,11 +70,12 @@ namespace Cadastro_Pessoa.Classes
             return 
 @$"Nome: {Nome}.
 CNPJ: {CNPJ}.
+CNPJ Válido: {(ValidarCNPJ(CNPJ) ? "Sim": "Não" )}
 Razão Social: {RazaoSocial}.
 Endereço: {Endereco.Logradouro} {Endereco.Numero}.
 Rendimento: R$ {Rendimento:0.00}.
+Taxa de imposto a ser paga é R$ {PagarImposto(Rendimento):0.00}.
 ";
         }
-        
     }
 }
