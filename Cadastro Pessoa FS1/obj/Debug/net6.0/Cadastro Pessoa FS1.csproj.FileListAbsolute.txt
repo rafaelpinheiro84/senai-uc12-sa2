@@ -13,3 +13,18 @@ C:\Users\handr\Desktop\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.
 C:\Users\handr\Desktop\Cadastro Pessoa FS1\obj\Debug\net6.0\ref\Cadastro Pessoa FS1.dll
 C:\Users\handr\Desktop\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.pdb
 C:\Users\handr\Desktop\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.genruntimeconfig.cache
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\bin\Debug\net6.0\Cadastro Pessoa FS1.exe
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\bin\Debug\net6.0\Cadastro Pessoa FS1.deps.json
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\bin\Debug\net6.0\Cadastro Pessoa FS1.runtimeconfig.json
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\bin\Debug\net6.0\Cadastro Pessoa FS1.dll
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\bin\Debug\net6.0\ref\Cadastro Pessoa FS1.dll
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\bin\Debug\net6.0\Cadastro Pessoa FS1.pdb
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.csproj.AssemblyReference.cache
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.AssemblyInfoInputs.cache
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.AssemblyInfo.cs
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.csproj.CoreCompileInputs.cache
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.dll
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\ref\Cadastro Pessoa FS1.dll
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.pdb
+D:\Programação\Senai-FullStack\4 - Back-End\Codificação Back-end\SA2\RepositorioGitHub-UC12\Cadastro Pessoa FS1\obj\Debug\net6.0\Cadastro Pessoa FS1.genruntimeconfig.cache

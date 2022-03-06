@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\handr\\Desktop\\Cadastro Pessoa FS1\\Cadastro Pessoa FS1.csproj": {}
+    "D:\\Programação\\Senai-FullStack\\4 - Back-End\\Codificação Back-end\\SA2\\RepositorioGitHub-UC12\\Cadastro Pessoa FS1\\Cadastro Pessoa FS1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\handr\\Desktop\\Cadastro Pessoa FS1\\Cadastro Pessoa FS1.csproj": {
+    "D:\\Programação\\Senai-FullStack\\4 - Back-End\\Codificação Back-end\\SA2\\RepositorioGitHub-UC12\\Cadastro Pessoa FS1\\Cadastro Pessoa FS1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\handr\\Desktop\\Cadastro Pessoa FS1\\Cadastro Pessoa FS1.csproj",
+        "projectUniqueName": "D:\\Programação\\Senai-FullStack\\4 - Back-End\\Codificação Back-end\\SA2\\RepositorioGitHub-UC12\\Cadastro Pessoa FS1\\Cadastro Pessoa FS1.csproj",
         "projectName": "Cadastro Pessoa FS1",
-        "projectPath": "C:\\Users\\handr\\Desktop\\Cadastro Pessoa FS1\\Cadastro Pessoa FS1.csproj",
+        "projectPath": "D:\\Programação\\Senai-FullStack\\4 - Back-End\\Codificação Back-end\\SA2\\RepositorioGitHub-UC12\\Cadastro Pessoa FS1\\Cadastro Pessoa FS1.csproj",
         "packagesPath": "C:\\Users\\handr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\handr\\Desktop\\Cadastro Pessoa FS1\\obj\\",
+        "outputPath": "D:\\Programação\\Senai-FullStack\\4 - Back-End\\Codificação Back-end\\SA2\\RepositorioGitHub-UC12\\Cadastro Pessoa FS1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\handr\\AppData\\Roaming\\NuGet\\NuGet.Config",

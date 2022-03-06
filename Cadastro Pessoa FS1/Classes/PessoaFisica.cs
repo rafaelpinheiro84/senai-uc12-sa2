@@ -31,17 +31,15 @@ namespace Cadastro_Pessoa_FS1.Classes
 
                 double anos = (dataAtual - resultado).TotalDays / 365;
 
-                if(anos >= 18)
+                if(anos >= 18 && anos < 120)
                 {
                     return true;
                 }
                 
-                return false;
+                return false; // não precisa dar retorno aqui
             }
             return false;
         }
-
-       
 
         public override float PagarImposto(float rendimento)
         {
