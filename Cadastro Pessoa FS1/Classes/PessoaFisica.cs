@@ -6,7 +6,9 @@ namespace Cadastro_Pessoa_FS1.Classes
     {
         public string? cpf { get; set; }
         public string? dataNascimento { get; set; }
-
+        public string caminho { get; private set; } = "Database/PessoaFisica.csv";
+        
+        
         public bool ValidarDataNascimento(DateTime dataNasc)
         {
             DateTime dataAtual = DateTime.Today;
@@ -61,5 +63,40 @@ namespace Cadastro_Pessoa_FS1.Classes
             }
         }
         
+        public void Inserir(PessoaFisica pf)
+        {
+            VerificarPastaArquivo(caminho);
+
+            string[] pfString = { $"{pf.nome},{pf.cpf},{pf.dataNascimento},{pf.rendimento}" };
+            
+            File.AppendAllLines(caminho, pfString);
+            
+        }
+
+        public List<PessoaFisica> Ler()
+        {
+            VerificarPastaArquivo(caminho);
+            
+            List<PessoaFisica> listaPf = new List<PessoaFisica>();
+
+            string[] linhas = File.ReadAllLines(caminho);
+
+            foreach( string cadaLinha in linhas )
+            {
+                string[] atributos = cadaLinha.Split(",");
+
+
+                PessoaFisica cadaPf = new PessoaFisica();
+
+                cadaPf.nome = atributos[0];
+                cadaPf.cpf = atributos[1];
+                cadaPf.dataNascimento = atributos[2];
+                cadaPf.rendimento = int.Parse(atributos[3]);
+                
+                listaPf.Add(cadaPf);
+            }
+
+            return listaPf;
+        }
     }
 }

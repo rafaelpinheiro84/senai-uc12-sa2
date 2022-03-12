@@ -10,9 +10,6 @@ Console.WriteLine(@$"
 
 BarraCarregamento("Carregando ");
 
-List<PessoaFisica> listaPf = new List<PessoaFisica>();
-List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
-
 string? opcao;
 do
 {
@@ -110,7 +107,15 @@ do
 
                         novaPf.endereco = novoEnd;
 
-                        listaPf.Add(novaPf);
+                        Console.WriteLine($"Criar arquivo .txt ? S/N");
+                        string criarArquivo = Console.ReadLine().ToUpper();
+
+                        if (criarArquivo == "S")
+                        {
+                            CriarArquivoTxt(novaPf);
+                        }
+
+                        metodoPf.Inserir(novaPf);
 
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($"Cadastro realizado com sucesso");
@@ -123,10 +128,11 @@ do
 
                         Console.Clear();
 
-                        if (listaPf.Count > 0)
+                        List<PessoaFisica> listaPfArquivo = metodoPf.Ler();
+                        if (listaPfArquivo.Count > 0)
                         {
 
-                            foreach (PessoaFisica cadaPessoa in listaPf)
+                            foreach (PessoaFisica cadaPessoa in listaPfArquivo)
                             {
                                 Console.WriteLine(@$"
 Nome: {cadaPessoa.nome}
@@ -239,7 +245,16 @@ Taxa de imposto a ser paga é: {metodoPf.PagarImposto(cadaPessoa.rendimento).ToS
 
                         novaPj.endereco = novoEndPj;
 
-                        listaPj.Add(novaPj);
+                        Console.WriteLine($"Criar arquivo .txt ? S/N");
+                        string criarArquivo = Console.ReadLine().ToUpper();
+
+                        if (criarArquivo == "S")
+                        {
+                            CriarArquivoTxt(novaPj);
+                        }
+
+
+                        metodoPj.Inserir(novaPj);
 
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($"Cadastro realizado com sucesso");
@@ -249,19 +264,20 @@ Taxa de imposto a ser paga é: {metodoPf.PagarImposto(cadaPessoa.rendimento).ToS
 
                     case "2":
                         Console.Clear();
+                        List<PessoaJuridica> listaPjArquivo = metodoPj.Ler();
 
-                        if (listaPj.Count > 0)
+                        if (listaPjArquivo.Count > 0)
                         {
-
-                            foreach (PessoaJuridica cadaPessoa in listaPj)
+                            foreach (PessoaJuridica cadaPessoa in listaPjArquivo)
                             {
                                 Console.WriteLine(@$"
 Nome: {cadaPessoa.nome}
 Razão Social: {cadaPessoa.razaoSocial}
 CNPJ: {cadaPessoa.cnpj}
-Taxa de imposto a ser paga é: {metodoPj.PagarImposto(cadaPessoa.rendimento).ToString("C")}
 ");
+                                // Taxa de imposto a ser paga é: {metodoPj.PagarImposto(cadaPessoa.rendimento).ToString("C")}
                             }
+
                             Console.WriteLine($"Aperte 'Enter' para continuar");
                             Console.ReadLine();
                         }
@@ -270,6 +286,7 @@ Taxa de imposto a ser paga é: {metodoPj.PagarImposto(cadaPessoa.rendimento).ToS
                             Console.WriteLine($"Lista vazia!!");
                             Thread.Sleep(3000);
                         }
+
                         break;
 
                     case "0":
@@ -284,7 +301,7 @@ Taxa de imposto a ser paga é: {metodoPj.PagarImposto(cadaPessoa.rendimento).ToS
                 }
 
             } while (opcaoPj != "0");
-            
+
             break;
 
         case "0":
@@ -292,7 +309,6 @@ Taxa de imposto a ser paga é: {metodoPj.PagarImposto(cadaPessoa.rendimento).ToS
             Console.WriteLine($"Obrigado por utilizar nosso sistema");
 
             BarraCarregamento("Finalizando ", 300);
-
             break;
 
         default:
@@ -322,3 +338,33 @@ static void BarraCarregamento(string mensagem, int tempoEmMs = 500)
 
 }
 
+static void CriarArquivoTxt(Pessoa pessoa)
+{
+    using (StreamWriter sw = new StreamWriter($"{pessoa.nome}.txt"))
+    {
+        sw.Write(pessoa.nome);
+        Console.WriteLine("Arquivo .txt criado com sucesso!");
+        sw.Close();
+    }
+}
+
+// Ler de arquivo txt
+static void LerArquivoTxt(string path)
+{
+    if (path.Substring((path.Length - 5), 4) == ".txt") 
+    {
+        using (StreamReader sr = new StreamReader(path))
+        {
+            string linha;
+
+            while ((linha = sr.ReadLine()) != null)
+            {
+                Console.WriteLine($"{linha}");
+            }
+        }
+    }
+    else
+    {
+        Console.WriteLine($"arquivo não tem extensão .txt para ser lido");
+    }
+}
